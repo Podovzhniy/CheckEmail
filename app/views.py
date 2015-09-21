@@ -16,7 +16,7 @@ def login():
                             msg_color="green",
                             form=form)
         else:
-            flash(str(form.email.data) + " isn't valid ")
+            flash(str(form.email.data) + " is invalid ")
             return render_template('email.html',
                             msg_color="red",
                             form=form)
