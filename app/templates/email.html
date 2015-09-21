@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <form  class="form-signin" action="" method="post" name="email">
+        {{ form.hidden_tag() }}
+            <center><h1 class="form-signin-heading">@?</h1></center>
+            <h1 class="form-signin-heading">Check an e-mail address</h1>
+            {{ form.email(class="form-control", autofocus=true, required=true, placeholder="Email address") }}
+            <button class="btn btn-lg btn-primary btn-block w3-margin-bottom" type="submit">Check it !</button>
+            {% for message in get_flashed_messages() %}
+                <h3 style="color: {{ msg_color }}">{{ message }}</h3>
+            {% endfor %}
+          </form>
+{% endblock %}
